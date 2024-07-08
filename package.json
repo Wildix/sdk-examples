@@ -1,0 +1,30 @@
+{
+  "name": "@wildix/sdk-examples",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Wildix SDK examples",
+  "main": "index.js",
+  "scripts": {
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix"
+  },
+  "author": {
+    "name": "Wildix",
+    "url": "http://wildix.com"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "lerna": "^8"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18",
+    "@types/node": "^18",
+    "@wildix/eslint-config-style-guide": "1.2.1",
+    "typescript": "5.4.5"
+  },
+  "workspaces": {
+    "packages": [
+      "examples/*"
+    ]
+  }
+}
