@@ -1,0 +1,25 @@
+{
+  "name": "@wildix/sdk-examples-conversation-api-send-message",
+  "version": "1.0.0",
+  "description": "A simple example of sending a message to the x-bees channel using TypeScript",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "lint": "eslint . && npm run check-types",
+    "lint:fix": "eslint . --fix",
+    "check-types": "tsc --noemit"
+  },
+  "author": "Vladimir Gorobets",
+  "license": "ISC",
+  "dependencies": {
+    "@wildix/auth-utils": "^1.0.13",
+    "@wildix/xbees-conversations-client": "^1.0.55"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18",
+    "@types/node": "^18",
+    "ts-node": "^10",
+    "ts-node-dev": "^2",
+    "typescript": "5.4.5"
+  }
+}
