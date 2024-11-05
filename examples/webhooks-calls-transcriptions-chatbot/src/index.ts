@@ -25,7 +25,7 @@ const openaiClient = new OpenAI({
 });
 
 const conversationsClientToken = {token: () => Promise.resolve(botApiKey)};
-const conversationsClient = new ConversationsClient({env: 'stage', token: conversationsClientToken});
+const conversationsClient = new ConversationsClient({token: conversationsClientToken});
 
 const phasesStorage = new PhasesStorage();
 const botHandler = new ChatEventHandler(conversationsClient, openaiClient, openaiAssistantId, phasesStorage);
