@@ -13,7 +13,7 @@ const port = 3110;
 const botApiKey = 'BOT_API_TOKEN_HERE';
 
 const conversationsClientToken = {token: () => Promise.resolve(botApiKey)};
-const conversationsClient = new ConversationsClient({env: 'stage', token: conversationsClientToken});
+const conversationsClient = new ConversationsClient({token: conversationsClientToken});
 
 function isEventProcessable(event: WebhookChatMessageNewEvent) {
   // Ignore event if channel have more than 2 members.
