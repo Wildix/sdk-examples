@@ -71,6 +71,9 @@ app.post('/bot/webhook', async (request: Request, response: Response) => {
 
 // Start the server and Ngrok tunnel
 app.listen(port, async () => {
-  const url = await ngrok.connect(port);
+  const url = await ngrok.connect({
+    addr: port,
+    authtoken: '<YOUR_NGROK_TOKEN>'  // Replace with your ngrok authtoken
+  });
   console.log(`Public URL: ${url}/bot/webhook`);
 });
